@@ -1,0 +1,1134 @@
+/***************************
+BASIC STYLES
+***************************/
+
+/* Fonts */
+
+@font-face {
+  	font-family: 'Butler Medium';
+  	src: url('../fonts/butler-medium.otf') format('opentype'), url('../fonts/butler-medium.woff2') format('woff2'), url('../fonts/butler-medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Light';
+    src: url('../fonts/proxima-nova-light.woff2') format('woff2'), url('../fonts/proxima-nova-light.woff') format('woff'), url('../fonts/proxima-nova-light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Regular';
+    src: url('../fonts/proxima-nova-regular.woff2') format('woff2'), url('../fonts/proxima-nova-regular.woff') format('woff'), url('../fonts/proxima-nova-regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Proxima Nova Semibold';
+    src: url('../fonts/proxima-nova-semibold.woff2') format('woff2'), url('../fonts/proxima-nova-semibold.woff') format('woff'), url('../fonts/proxima-nova-semibold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Stone Harbour Italic';
+    src: url('../fonts/stoneharbour-talic.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Stone Harbour Line';
+    src: url('../fonts/stoneharbour-line.otf') format('opentype');
+}
+
+
+/* Basics */
+
+* {
+	-webkit-font-smoothing: antialiased;
+	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	background-color: #000; /* for fade-in purposes of the page */
+}
+
+h1 {
+	font-family: 'Butler Medium', Georgia, serif;
+	color: #FFF;
+	font-size: 85px;
+	margin:0;
+	padding:0;
+}
+
+h2 {
+	font-family: 'Proxima Nova Semibold', Georgia, serif;
+	color: #FFF;
+	font-size: 20px;
+	line-height: 1.4;
+	margin:10px 0 0;
+}
+
+h3 {
+	font-family: 'Butler Medium', Georgia, serif;
+	font-size: 42px;
+}
+
+h4 {
+	font-family: 'Butler Medium', Georgia, serif;
+	font-size: 36px;
+}
+
+h5 {
+	font-family: 'Butler Medium', Georgia, serif;
+	font-size: 28px;
+}
+
+p {
+	font-family: 'Proxima Nova Regular', Georgia, serif;
+	font-size: 18px;
+	line-height: 1.4;
+}
+
+span {
+	font-family: 'Proxima Nova Regular', Georgia, serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin: 10px 0 5px 0;
+    font-weight:normal;
+    color: #FFF;
+    font-family: 'Proxima Nova Light', arial;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.col-centered {
+	float:none;
+	margin: 0 auto;
+}
+
+.dark {
+	background: #222;
+}
+
+.scroll {
+	width:185px;
+	position: absolute;
+	bottom: 27px;
+	left: 0;
+	right: 0;
+	margin:0 auto;
+}
+
+	.scroll-mobile {
+		width:29%;
+	}
+
+	.scroll-desktop {
+		width:37%;
+	}
+
+.hideme {
+	opacity: 0;
+}
+
+.no-padding-left {
+	padding-left: 0;
+}
+
+.no-padding-right {
+	padding-right:0;
+}
+
+::-webkit-input-placeholder {text-align:center;color: #111;font-size: 14px;font-family: 'Proxima Nova Light', helvetica, arial;}
+::-moz-placeholder {text-align:center;color: #111;font-size: 14px;font-family: 'Proxima Nova Light', helvetica, arial;}
+:-ms-input-placeholder {text-align:center;color: #111;font-size: 14px;font-family: 'Proxima Nova Light', helvetica, arial;}
+:-moz-placeholder {text-align:center;color: #111;font-size: 14px;font-family: 'Proxima Nova Light', helvetica, arial;}
+
+#form-messages .success {
+	margin: 20px 0 22px 0;
+	color: #27ae60;
+	font-family:'Proxima Nova Semibold';
+}
+
+
+/* Pre-loader */
+
+.pre-loader-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height:100vh;
+	background:#000;
+}
+
+	.pre-loader {
+	    border: 1px solid #FFF;
+	    height: 50px;
+	    width: 50px;
+	    margin:0 auto;
+	    display: flex;
+	    align-items:center;
+	    justify-content: center;
+	}
+
+		.pre-loader #wave {
+		    stroke-dasharray: 0 16 101 16;
+		    animation: moveTheWave 2400ms linear infinite;
+		    -webkit-animation: moveTheWave 2400ms linear infinite;
+		}
+
+		@keyframes moveTheWave {
+			0% {stroke-dashoffset: 0;transform: translate3d(0, 0, 0);}
+			100% {stroke-dashoffset: -133;transform: translate3d(-90px, 0, 0);}
+		}
+
+		@-webkit-keyframes moveTheWave {
+			0% {stroke-dashoffset: 0;transform: translate3d(0, 0, 0);}
+			100% {stroke-dashoffset: -133;transform: translate3d(-90px, 0, 0);}
+		}
+
+/* Header */
+
+.header {
+	text-align: center;
+	height: 100vh;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	position: relative;
+  	background-size:cover;
+  	background-position:center center;
+  	background-repeat:no-repeat;
+}
+
+	.header .menu {
+		position: absolute;
+    	top: 0; bottom: 0; left: 0; right: 0;
+    	width: auto;
+    	margin: 0 auto;
+    	height: 70px;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+	}
+
+		.header .menu a {
+			padding: 0 10px;
+			font-family: 'Proxima Nova Semibold', helvetica, arial;
+			color:#FFF;
+			text-decoration: none;
+			font-size: 16px;
+			text-transform: uppercase;
+			letter-spacing: 0.2px;
+			display: inline;
+		}
+
+			.header .menu a:hover, .header .menu a:focus, .header .menu a:active {
+				text-decoration:underline;
+			}
+
+/* Header title */
+
+.title {
+    text-align: center;
+    color: #FFF;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	border:2px solid #FFF;
+	padding: 30px;
+}
+
+/* Text block */
+
+.text-block-light, .text-block-dark {
+	text-align: center;
+	line-height: 1.4;
+}
+
+	.text-block-light h3 {color: #222;}
+	.text-block-light p {color: #444; padding-top:7px;}
+
+	.text-block-dark h3 {color: #FFF;}
+	.text-block-dark p {color: #FFF; padding-top:7px;}
+
+
+/* Slide block */
+
+.slide-block {
+	display: none;
+	background: #FFF;
+	text-align: center;
+	padding: 25px 0 27px 0;
+}
+
+
+	.slide-block img {
+		display: inline;
+		text-align: center;
+		width: 14px;
+		transition: all 0.3s;
+		transform: rotate(0);
+	}
+
+		.slide-block img:hover, .slide-block img:active {
+				transform: rotate(90deg);
+			}
+
+	.slide-block h2, .slide-block p, .slide-block a {
+		font-family: 'Proxima Nova regular', helvetica, arial;
+		color: #111;
+	}
+
+	.slide-block h2 {
+		margin:20px 0;
+	}
+
+	.slide-block p {
+		font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 0;
+	}
+
+	.slide-block a {
+		display: block;
+		padding-top:20px;
+		text-decoration: underline;
+		font-size: 15px;
+	}
+
+		.slide-block a:hover {
+			text-decoration: none;
+		}
+
+		.slide-block a:last-of-type {
+			padding-top:8px;
+		}
+
+	.slide-block.contact-wrapper {
+		padding-bottom: 50px;	
+	}
+
+	.contact-wrapper form {
+		margin-top:35px;
+	}
+
+		.contact-wrapper .field {
+			margin-bottom:17px;
+		}
+
+			.contact-wrapper .field:last-of-type {
+				margin-bottom: 0;
+			}
+
+			.contact-wrapper input, .contact-wrapper textarea {
+				width:100%;
+				border:0 none;
+				padding:11px 12px 8px 12px;
+				color: #111;
+				background:#F2F2F2;
+				border-bottom:2px solid #F2F2F2;
+				transition: all 0.5s;
+				border-radius:0;
+			}
+
+			.contact-wrapper textarea {
+				height:140px;
+			}
+
+				.contact-wrapper input:focus, .contact-wrapper textarea:focus {
+					border-bottom: 2px solid #5967e6;
+					color: #000;
+					outline: none;
+				}
+
+			.contact-wrapper button {
+				border:0 none;
+				width: 100%;
+				background: #5967e6;
+				padding: 11px;
+				color: #FFF;
+			}
+
+			.contact-wrapper .success, .contact-wrapper .error {
+				margin: 20px 0 22px 0;
+				font-family:'Proxima Nova Semibold';
+			}
+
+			.contact-wrapper .success {
+				color: #27ae60;
+			}
+
+			.contact-wrapper .error {
+				color: #c0392b;
+			}
+
+/* Footer */
+
+.footer {
+	text-align: center;
+	font-family: 'Proxima Nova Semibold';
+	background: #222;
+	padding: 45px 0;
+}
+
+	.footer a {
+		padding: 0 15px;
+		color:#FFF;
+		text-transform: uppercase;
+	}
+
+/*********************************************************
+CUSTOM STYLES - HOME / INDEX
+*********************************************************/
+
+.home {
+	background: #000;
+}
+	
+	.home section {
+		-webkit-perspective: 0;
+	    -webkit-backface-visibility: hidden;
+        -webkit-transform: translate3d(0,0,0);
+		visibility:visible;
+	}
+
+	.home .title {
+		padding: 0;
+		border:0 none;
+	}
+
+	.home label {
+		display: none;
+	}
+
+	.home h2 {
+		text-align: center;
+		margin-bottom: 30px;
+		margin-top: 0;
+		font-size: 26px;
+		font-family: 'Proxima Nova Regular', Helvetica, Arial;
+		color: #333;
+	}
+
+	.title .home-title-wrapper {
+		position: absolute;
+		left: 0;right: 0;top:50%;
+		transform: translateY(-50%);
+		margin: 0 auto;
+		z-index:400;
+	}
+	
+		.title .home-title-wrapper img {
+			position: absolute;
+			left: 20%;
+			z-index:300;
+			width: 150px;
+		}
+
+		.title .home-title-wrapper h1 {
+			display: block;
+			margin: 0 auto;
+		    font-family: 'Stone Harbour Italic', Helvetica, Arial, Sans-serif;
+		    font-size: 9vw;
+		    line-height: 0.95;
+		    z-index: 200;
+		    opacity:0.95;
+		    text-shadow: 0px 0px 4px rgba(0,0,0,1);
+		}
+
+			.title .home-title-wrapper h1 span {
+				font-family: 'Stone Harbour Line', Helvetica, Arial, Sans-serif;
+				font-size: 160px;
+				display: block;
+				padding-top:40px;
+				line-height:0;
+			}
+
+	.home .title .dark-overlay {
+		position: absolute;
+		top:50%;left:0;bottom:0;right:0;
+		transform: translateY(-50%);
+    	width: 100%;
+    	height:100%;
+    	/*background: rgba(0,0,0,0.3);*/
+    	z-index: 100;
+    	margin:0 auto;
+	}
+
+#video-viewport {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+}
+
+	#video-viewport video {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+/* Hide play button on mobile video header */
+.IIV::-webkit-media-controls-play-button,
+.IIV::-webkit-media-controls-start-playback-button {
+    opacity: 0;
+    pointer-events: none;
+    width: 5px;
+}
+
+
+/* WORK */
+
+	.home-project .fp-tableCell {
+		vertical-align: bottom;
+	}
+
+	.home-left .home-project-detail, .home-right .home-project-detail {
+	    display: block;
+	    width: 100%;
+	}
+
+	.home-left .home-project-detail {
+		padding: 0 0 4% 5%;
+	}
+
+	.home-right .home-project-detail {
+		padding: 0 5% 4% 0;
+		float: right;
+		text-align: right;
+	}
+
+	    .home-project h1, .home-project h1 span {
+	    	font-family: 'Butler Medium', Georgia, serif;
+	        font-size:8.5vw;
+	        line-height: 1.1;
+	        overflow:hidden;
+	        color: #FFF;
+	        margin-bottom: 0;
+	    }
+
+	    	.home-project h1:hover, .home-project h1:active, .home-project h1:focus {
+	    		cursor: pointer;
+	    	}
+
+	    .home-project h3 {
+	        font-size:1.55vw;
+	        color: #FFF;
+	        margin:0;
+	        width:60vw;
+	        line-height: 1.5;
+	        font-family: 'Proxima Nova Semibold', Helvetica, Arial;
+	    }
+
+	    	.home-project.home-left h3 {
+	            text-align: left;
+	        }
+
+	        .home-project.home-right h3 {
+	            text-align: right;
+	            float: right;
+	        }
+
+	    .home-project .mobile-button {
+	    	display: none;
+	    }
+
+	    .home-project.home-left .home-links {
+            position: absolute;
+            top: 30px;
+            left: 80px;
+        }
+        
+        .home-project.home-right .home-links {
+            position: absolute;
+            top: 30px;
+            right: 80px;
+        }
+
+	    	.home-project.home-left .line-through-link {
+	    		padding-right: 20px;
+	    	}
+
+	    	.home-project.home-right .line-through-link {
+	    		padding-left: 20px;
+	    	}
+
+		        .home-project .line-through-link span {
+		            color:#FFF;
+		            font-size: 1.55vw;
+		            font-family: 'Proxima Nova Semibold', Helvetica, Arial;
+		        }
+
+		        .home-project .line-through-link:hover {
+		            text-decoration:underline;
+		            color: #FFF;
+		        }
+
+		.home-hundred {background: url('../images/hundred-day.jpg') top center no-repeat;background-size:cover;}
+		.home-booking {background: url('../images/booking.jpg') top center no-repeat;background-size:cover;}
+		.home-yanmar {background: url('../images/yanmar.jpg') top center no-repeat;background-size:cover;}
+		.home-doelbeleggen {background: url('../images/doelbeleggen.jpg') top center no-repeat;background-size:cover;}
+		.home-tyt {background: url('../images/tyt.jpg') top center no-repeat;background-size:cover;}
+
+/* ABOUT */
+
+.home-about {
+	text-align: center;
+	color:#333;
+	background: url('../images/about-desktop.jpg') center no-repeat;
+	background-size:cover;
+}
+
+	.home-about .fp-tableCell {
+		vertical-align: top;
+	}
+
+	.home-about-content {
+		width:55%;
+		display: block;
+		margin:7% auto 0 auto;
+	}
+	
+		.home-about-content p {
+		  font-family: 'Proxima Nova Regular', Helvetica, Arial, Sans-serif;
+		  font-size: 16px;
+		  line-height:1.6;
+		}
+
+		.home-about-content a {
+			display: inline-block;
+			text-decoration: underline;
+			font-family: 'Proxima Nova Regular', Helvetica, Arial;
+			font-size:16px;
+			color: #333;
+			padding:6px 10px 0 10px;
+		}
+
+			.home-about-content a:hover {
+				text-decoration:none;
+			}
+
+/* CONTACT */
+
+.home .contact {
+	background:url('../images/contact-bg-dark.png') right no-repeat;
+	background-size:cover;
+}
+
+	.home .contact-content {
+		width: 425px;
+		margin:0 auto;
+	}
+
+		.contact-content-form {
+			padding: 30px 25px 25px;
+			background:#FFF;
+			color: #111;
+			font-family:'Proxima Nova Regular';
+		}
+
+			.contact-content-form .field {
+					margin-bottom:17px;
+				}
+
+					.contact-content-form .field:last-of-type {
+						margin-bottom: 0;
+					}
+
+			.contact-content-form input, .contact-content-form textarea {
+				width:100%;
+				border:0 none;
+				padding:11px 12px 8px 12px;
+				color: #111;
+				background:#F2F2F2;
+				border-bottom:2px solid #F2F2F2;
+				transition: all 0.5s;
+				border-radius:0;
+			}
+
+				.contact-content-form input:focus, .contact-content-form textarea:focus {
+					border-bottom: 2px solid #5967e6;
+					color: #000;
+					outline: none;
+				}
+
+			.contact-content-form button {
+				border:0 none;
+				width: 100%;
+				background: #5967e6;
+				padding: 11px;
+				color: #FFF;
+			}
+
+			.contact-content-form textarea {
+				height: 100px;
+			}
+
+			.contact-content-form .success, .contact-content-form .error {
+				margin: 20px 0 22px 0;
+				font-family:'Proxima Nova Semibold';
+				text-align: center;
+				font-size:13px;
+			}
+
+			.contact-content-form .success {
+				color: #27ae60;
+			}
+
+			.contact-content-form .error {
+				color: #c0392b;
+			}
+
+/*********************************************************
+CUSTOM STYLES - YANMAR DETAIL
+*********************************************************/
+
+.yanmar .header {
+	background-image:url('../images/yanmar-content.jpg');
+}
+
+.yanmar .concept {
+	text-align: left;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+	.yanmar .concept .text-block-light {
+		text-align: left;
+	}
+
+.yanmar .engine {
+	background: url('../images/yanmar-engine.png') no-repeat;
+	background-size: cover;
+	background-position: center center;
+	height: 834px;
+	text-align:center;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+.yanmar .showcase {
+	text-align: center;
+	padding-top: 130px;
+}
+
+	.yanmar .storytelling {
+		padding-bottom: 130px;
+	}
+
+	.yanmar .showcase img {
+		width: 100%;
+	}
+
+.yanmar .clients {
+	background:url('../images/yanmar-clients_bg.svg') no-repeat top right #1A1A1A;
+	background-size:100%;
+}
+
+	.yanmar .clients a {
+		color: #FFF;
+		text-decoration: underline;
+	}
+
+		.yanmar .clients a:hover, .yanmar .clients a:active, .yanmar .clients a:focus {
+			color: #FFF;
+			text-decoration: none;
+		}
+
+	.yanmar .clients .text-block-dark {
+		padding-top: 110px;
+    	padding-bottom: 120px;
+    	padding-left: 0;
+		text-align: left;
+	}
+
+.yanmar .footer {
+	background: #1A1A1A;
+}
+
+/*********************************************************
+CUSTOM STYLES - 100DAYS DETAIL
+*********************************************************/
+
+.hundred-days .header {
+	background-image: url('../images/hundreddays-content.jpg');
+	background-position: top center;
+}
+
+
+	.hundred-days .header .full-project {
+		font-family: 'Proxima Nova Semibold', arial, sans-serif;
+		display: inline-block;
+		background: #FFF;
+		color: #222;
+		border-radius: 4px;
+		font-size: 13px;
+		letter-spacing: 0.4px;
+		padding: 12px 15px;
+		/*width: 180px;*/
+		text-transform: uppercase;
+		margin-top:25px;
+	}
+
+	
+.hundred-days .best-work {
+	text-align: center;
+	padding-top:100px;
+}
+
+	.hundred-days .best-work .title {
+		padding-bottom: 96px;
+	}
+
+		.hundred-days .best-work .title h3 {
+			font-size: 57px;
+		}
+
+	.hundred-days .best-work-detail {
+		text-align: left;
+		/*width:420px;*/
+		display: inline-block;
+		/*margin:0 60px 80px 60px;*/
+	}
+
+		.hundred-days .best-work-detail h5 {
+			padding:32px 0 7px 0;
+		}
+
+		.hundred-days .best-work-detail a {
+			overflow: hidden;
+			display: block;
+			border-radius: 10px;
+		}
+
+		.hundred-days .best-work-detail p {
+			font-size: 15px;
+			line-height: 1.4;
+		}
+
+.hundred-days .border-unique {
+	border: 1px solid #EFEFEF;
+}
+
+	/* Lightbox */
+
+    #lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+    }
+
+        #lightbox p { 
+            color: #fff;
+            font-size: 18px;
+        }
+
+        #lightbox #wrapper {
+            margin:0 auto;
+        }    
+
+    /* Lightbox Title */
+
+    #lightbox #title {
+        float: left;
+        padding:24px 0 22px 0;
+    }
+
+        #lightbox #title h5 {
+            font-family: 'Proxima Nova Regular', helvetica, arial;
+            text-transform: uppercase;
+            padding: 0;
+            margin:0;
+            letter-spacing: 0.2px;
+            font-size: 15px;
+            color: #FFF;
+        }
+
+    /* Lightbox Navigation */
+
+    #lightbox #nav {
+        float: right;
+        padding:22px 0;
+    }
+
+        #lightbox #nav .slide-nav {
+            padding:5px;
+        }
+
+            #lightbox #nav .slide-nav img {
+                width:12px;
+                display:inline;
+            }
+
+    /* Lightbox Slideshow */
+
+    #lightbox #slideshow {
+        clear: both;
+    }
+
+        #lightbox #slideshow ul {
+            margin:0;
+            padding:0;
+            height: 100%;
+        }
+
+            #lightbox #slideshow ul li {
+                list-style-type:none;
+                text-align: center;
+            }
+
+/*********************************************************
+CUSTOM STYLES - BOOKING DETAIL
+*********************************************************/
+
+.booking .header {
+	background-image:url('../images/booking-content.jpg');
+}
+
+.booking .usp {
+	background:#3FA9F5;
+	padding:40px 0;
+	text-align: center;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+	.booking .usp span {
+		display: block;
+		font-family: Arial, sans-serif;
+		color: #FFF;
+	}
+
+		.booking .usp .usp-title {
+			font-size: 28px;
+			font-weight: bold;
+		}
+
+		.booking .usp .usp-subtitle {
+			font-size: 20px;
+			font-weight: normal;
+			padding-top:5px;
+		}
+
+.booking .concept {
+	padding-top:100px;
+	padding-bottom:120px;
+}
+
+	.booking .concept .text-block-light {
+		padding-bottom: 90px;
+	}
+
+.booking .imac {
+	background:url('../images/booking-content.png') bottom center no-repeat;
+	background-size:cover;
+	height: 1210px;
+}
+
+	.booking .imac .text-block-dark {
+		text-align: left;
+		position: relative;
+		top: 150px;
+	}
+
+.booking .compare {
+	padding-top: 90px;
+	padding-bottom: 90px;
+	background:#FFC853;
+}
+
+	.booking .compare p {
+		color:#333;
+	}
+
+.booking .showcase {
+	background: #F9F9F9;
+	padding-top:105px;
+	padding-bottom:80px;
+	text-align: center;
+}
+
+	.booking .showcase h3 {
+		margin-top: 0;
+		padding-top: 65px;
+		padding-bottom: 15px;
+	}
+
+	.booking .showcase p {
+		padding:0 40px 15px 40px;
+		line-height: 1.4;
+		font-size: 17px;
+	}
+
+	.booking .showcase a {
+		font-family: 'Proxima Nova Regular', arial, sans-serif;
+		text-decoration: underline;
+		color: #222;
+		font-size:17px;
+	}
+
+		.booking .showcase a:hover {
+			text-decoration: none;
+		}
+
+.booking .footer {
+	background: #003580;
+}
+
+/*********************************************************
+CUSTOM STYLES - DOELBELEGGEN DETAIL
+**********************************************************/
+
+.doelbeleggen .header {
+	background-image:url('../images/doelbeleggen-content.jpg');
+}
+
+.doelbeleggen .icons {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	border-bottom: 1px solid #F76E39;
+}
+
+.doelbeleggen .concept-intro {
+	background:url('../images/doelbeleggen-triangle-top_left.svg') no-repeat top left;
+	padding: 110px 0 35px 0;
+}
+
+	.doelbeleggen .concept-intro .text-block-light h3, .doelbeleggen .concept-intro .text-block-light p {
+		color:#000066;
+	}
+
+.doelbeleggen .concept-screen {
+	background:url('../images/doelbeleggen-bg-screen.svg') no-repeat top right;
+	margin-bottom: 100px;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+	.doelbeleggen .concept-screen img {
+		margin-bottom: 150px;
+		margin-top: 93px;
+	}
+
+.doelbeleggen .responsive {
+	background:url('../images/doelbeleggen-bg-responsive.svg') no-repeat bottom;
+	height: 1100px;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+	.doelbeleggen .responsive .responsive-placement {
+		position: relative;
+		top: 225px;
+	}
+
+.doelbeleggen .massive-intro {
+	background:url('../images/doelbeleggen-triangle-top_right.svg') no-repeat top right;
+	padding:120px 0;
+}
+
+.doelbeleggen .massive-screen {
+	background:url('../images/doelbeleggen-triangle-bottom_left.svg') no-repeat bottom left;
+	padding-bottom: 90px;
+}
+
+.doelbeleggen .footer {
+	background:#000066;
+	padding:30px 0;
+}
+
+/*********************************************************
+CUSTOM STYLES - TYT DETAIL
+*********************************************************/
+
+.tyt .header {
+	background-image:url('../images/tyt-content.jpg');
+}
+
+
+.tyt .title {
+	padding:30px 0;
+}
+
+.tyt .concept {
+	background:url('../images/tyt-top_bg.svg') no-repeat top center;
+	height: 541px;
+	padding-top:90px;
+	overflow:hidden;
+}
+
+	.tyt .concept .isometric {
+		margin-top:60px;
+	}
+
+	.tyt .concept .text-block-dark {
+		text-align: left;
+	}
+
+	.tyt .concept img {
+		width:630px;
+	}
+
+	.tyt .trial-error .text-block-light {
+		padding-top:90px;			
+		padding-bottom: 100px;
+	}
+
+.tyt .finals-dark {
+	background:url('../images/tyt-center_bg.svg') no-repeat top center;
+	height:1050px;
+	margin:90px 0 120px 0;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+}
+
+	.tyt .finals-dark .container {
+		align-self: flex-end;
+	}
+
+		.tyt .finals-dark .text-block-dark {
+			text-align: right;
+			float: right;
+			padding-bottom:90px;
+			padding-right: 0;
+		}
+
+			.tyt .finals-dark .text-block-dark:after {
+				clear: both;
+			}
+
+.tyt .finals-light {
+	background:url('../images/tyt-bottom_bg.svg') no-repeat bottom center;
+}
+
+	.tyt .finals-light .text-block-light {
+		margin-bottom:140px;
+	}
+
+.tyt .footer {
+	background: #212635;
+	padding: 75px 0 60px 0;
+}

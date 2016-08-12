@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="application-name" content="Portfolio by Chris Constandse"/>
+    <meta name="msapplication-TileColor" content="##00000" />
+    <meta name="msapplication-TileImage" content="images/favicons/mstile-144x144.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Portfolio by Chris Constandse</title>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicons/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16" />
+
+    <!-- Reset -->
+    <link href="css/reset.css" rel="stylesheet">
+    
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-full.css" rel="stylesheet">
+    
+    <!-- Full page scrolling CSS -->
+    <link href="css/jquery.fullPage.css" rel="stylesheet">
+
+    <!-- Custom -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Media Queries -->
+    <link href="css/responsive.css" rel="stylesheet">
+    
+    <style>
+
+    .preload-block * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+        animation: none !important;
+        -moz-animation: none !important;
+        -webkit-animation: none !important;
+        -o-animation: none !important;
+        opacity: 0 !important;
+    }
+
+    .animate-1s {
+        animation: fadein 1s;
+        -moz-animation: fadein 1s; /* Firefox */
+        -webkit-animation: fadein 1s; /* Safari and Chrome */
+        -o-animation: fadein 1s; /* Opera */
+    }
+
+    .animate-2s {
+        animation: fadein 2s;
+        -moz-animation: fadein 2s; /* Firefox */
+        -webkit-animation: fadein 2s; /* Safari and Chrome */
+        -o-animation: fadein 2s; /* Opera */
+    }
+
+        @keyframes fadein {
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-moz-keyframes fadein { /* Firefox */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-webkit-keyframes fadein { /* Safari and Chrome */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity:1;
+            }
+        }
+        @-o-keyframes fadein { /* Opera */
+            from {
+                opacity:0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+    video { 
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        background-image:url('images/doelbeleggen-content.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom center;
+    }
+
+    .typed-cursor{
+	    opacity: 1;
+	    -webkit-animation: blink 0.7s infinite;
+	    -moz-animation: blink 0.7s infinite;
+	    animation: blink 0.7s infinite;
+	}
+		@keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+
+    </style>
+
+</head>
+
+<body class="home" ontouchstart="">
+    <div class="pre-loader-wrapper">
+        <div class="pre-loader">
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="40px" height="60px" viewBox="5 0 80 60">
+                <path id="wave" fill="none" stroke="#FFF" stroke-width="2" stroke-linecap="round">
+                </path>
+            </svg>
+        </div>
+    </div>
+    <div id="fullpage" class="preload-block">
+        <section class="title section" data-anchor="section-1">
+            <div class="home-title-wrapper animate-2s">
+                <h1>digital design<br>creates happiness<br>
+                <span class="swash-underline">a</span>
+                </h1>
+            </div>
+            <div class="dark-overlay"></div>
+            <video autoplay muted loop preload="auto" id="bgvid" class="animate-2s" poster="images/doelbeleggen-content.jpg">
+                <source src="video/ny-aerial-compressed.mp4" type="video/mp4">
+                <source src="video/ny-aerial-compressed.webm" type="video/webm">
+            </video>
+        </section>
+
+        <section class="home-project home-hundred home-left section" data-anchor="section-2">
+            <div class="home-links hideme">
+                <a href="#" class="line-through-link"><span>about</span></a>
+                <a href="#" class="line-through-link"><span>contact</span></a>
+            </div>
+            <div class="home-project-detail home-hundred-detail hideme">
+                <h1><span class="home-hundred-title">100 Day Challenge</span><span class="typed-cursor">|</span></h1>
+                <h3>One hundred days in a row was just the beginning. Having multiple variants and optimisation rounds made this project much more than a simple 100 day challenge.<br>
+                    <a href="#" class="mobile-button">view project</a>
+                </h3>
+            </div>
+        </section>
+
+        <section class="home-project home-booking home-right section" data-anchor="section-3">
+            <div class="home-links hideme">
+                <a href="#" class="line-through-link"><span>about</span></a>
+                <a href="#" class="line-through-link"><span>contact</span></a>
+            </div>
+            <div class="home-project-detail home-booking-detail hideme">
+                <h1><span class="home-booking-title">Booking.com</span><span class="typed-cursor">|</span></h1>
+                <h3>An extensive new webdesign proposal of the most visited pages, with a strong focus on the UX for one of the biggest brands in the world: Booking.com.<br>
+                    <a href="#" class="mobile-button">view project</a>
+                </h3>
+            </div>
+        </section>
+
+        <section class="home-project home-yanmar home-left section" data-anchor="section-4">
+            <div class="home-links hideme">
+                <a href="#" class="line-through-link"><span>about</span></a>
+                <a href="#" class="line-through-link"><span>contact</span></a>
+            </div>
+            <div class="home-project-detail home-yanmar-detail hideme">
+                <h1><span class="home-yanmar-title">Yanmar Europe</span><span class="typed-cursor">|</span></h1>
+                <h3>A full re-branding in design and front-end of the online communication for all the markets of Yanmar Europe, the largest dealer in engines worldwide.<br>
+                    <a href="#" class="mobile-button">view project</a>
+                </h3>
+            </div>
+        </section>
+
+        <section class="home-project home-doelbeleggen home-right section" data-anchor="section-5">
+            <div class="home-links hideme">
+                <a href="#" class="line-through-link"><span>about</span></a>
+                <a href="#" class="line-through-link"><span>contact</span></a>
+            </div>
+            <div class="home-project-detail home-doelbeleggen-detail hideme">
+                <h1><span class="home-doelbeleggen-title">Doelbeleggen</span><span class="typed-cursor">|</span></h1>
+                <h3>Creating the visual design and front-end for a platform that helps people reach their financial goals through smart investments, called Doelbeleggen.<br>
+                    <a href="#" class="mobile-button">view project</a>
+                </h3>
+            </div>
+        </section>
+
+        <section class="home-project home-tyt home-left section" data-anchor="section-5">
+            <div class="home-links hideme">
+                <a href="#" class="line-through-link"><span>about</span></a>
+                <a href="#" class="line-through-link"><span>contact</span></a>
+            </div>
+            <div class="home-project-detail home-tyt-detail hideme">
+                <h1><span class="home-tyt-title">Track your Transport</span><span class="typed-cursor">|</span></h1>
+                <h3>An extensive visual study for a real-time mobile app that tracks the position of the public transport (bus, tram, metro) in the city of Amsterdam.<br>
+                    <a href="#" class="mobile-button">view project</a>
+                </h3>
+            </div>
+        </section>
+
+        <section class="home-about section" data-anchor="section-6">
+            <div class="home-about-content hideme">
+                <p>Constandse.design is a one man design army, run by Chris Constandse. I am a full stack webdesigner, with a strong interest in everything digital. From photography to Treehouse's Javascript course. Besides my work I am a design mentor at trydesignlab.com where I guide students through the basics of visual design. I love to make people better through knowledge sharing. My end goal is to live and work in NYC. My next step? Learning as much as possible everyday to become the best in my field.</p>
+                <a href="/other/cv-constandse_design.pdf" target="_blank">Download Resume</a>
+                <a href="https://nl.linkedin.com/in/chris-constandse-236b7012" target="_blank">View LinkedIn</a>
+            </div>
+        </section>
+
+        <section class="contact section" data-anchor="section-7">
+            <div class="contact-content">
+                <div class="contact-content-form">
+                    <h2>Talking about us</h2>
+                    <form action="mailer.php" autocomplete="off" id="ajax-contact" method="post" name="ajax-contact">
+                        <div class="field">
+                            <input id="name" name="name" placeholder="Your name" required="" type="text">
+                        </div>
+                        <div class="field">
+                            <input id="email" name="email" placeholder="Your email" required="" type="email">
+                        </div>
+                        <div class="field">
+                            <textarea id="message" name="message" placeholder="Your message" required=""></textarea>
+                        </div>
+                        <div id="form-messages"></div>
+                        <div class="field">
+                            <button type="submit">Send message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/jquery-1.12.0.min.js"></script>
+
+    <!-- scripts for contact form -->
+    <script src="js/app.js"></script>
+
+    <!-- scripts for mobile video playback -->
+    <script src="js/iphone-inline-video.browser.js"></script>
+    
+    <!-- Triggers FullPageJS -->
+    <script src="js/jquery.fullPage.min.js"></script>
+
+    <!-- Typed.JS for hovering over titles -->
+	<script src="js/typed.js"></script>
+	<script src="js/typed-custom.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/custom.js"></script>
+
+</body>
+
+</html>

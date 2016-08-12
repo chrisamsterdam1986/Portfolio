@@ -1,0 +1,272 @@
+/*********************************************************
+STANDARD MEDIA QUERIES
+*********************************************************/
+
+/* Media query: tablet & mobile */
+@media only screen and (max-width: 991px) {
+
+	/* Basic styles */
+	.title .home-title-wrapper h1 {font-size:12vw;}
+	.mobile-tablet-only {display:inline;}
+	.desktop-only {display:none !important;}
+	.text-block-dark p, .text-block-light p {padding-top:0;}
+	.col-centered-responsive {float:none;margin:0 auto;}
+
+	/* Home styles */
+	.home .title-content h1 {font-size:16vw;}
+	.home .home-about {background: url('../images/about-mobile.jpg') center no-repeat;background-size:cover;}
+	.home .home-about p {font-size:15px;line-height:1.4;}
+	.home .home-about a {font-size:15px;padding:6px 10px;}
+	.home .no-padding {padding:0;}
+	.line-through-link {display: none;}
+	.home-project .line-through-title:hover, .home-project .line-through-link:hover {text-decoration: none;text-decoration-line: none;}
+    .title .title-wrapper h1 {font-size: 12.5vw;}
+    .title .title-wrapper h1 span {font-size:14vw;padding-top:4%;}
+    .home-project .mobile-button {display: inline-block;background:none;border:1px solid #FFF;margin-top:25px;padding: 11px 20px 9px 20px;border-radius: 2px;letter-spacing:0.5px;font-size: 14px;text-transform: uppercase;color: #FFF;transition: all 0.2s;}
+	.home-project .mobile-button:hover, .home-project .mobile-button:focus, .home-project .mobile-button:active {background: #FFF;color: #333;text-decoration: none;}
+	.home-project h1 {font-size: 9vw;text-transform: uppercase;;margin-left: 0;white-space: normal;text-align: center;line-height: 1;}
+    .home-project h3, .home-project.home-right h3, .home-project.home-left h3 {position: static;width:70%;margin: 0 auto;text-align: center;font-size: 2.8vw;float:none;}
+    .home-project .fp-tableCell {vertical-align: middle;}
+	.home-left .home-project-detail, .home-right .home-project-detail {display: block;width: 100%;padding: 0;}
+	.home-about-content {width:75%;}
+
+	/* 100Days styles */
+	.hundred-days .best-work {padding-top:70px;}
+	.hundred-days .best-work .title {padding-bottom:70px;}
+	.hundred-days .best-work-detail h5 {text-align:center;}
+	.hundred-days .best-work-detail p {text-align:center;padding-bottom:55px;}
+	.hundred-days .content h2 {padding-top:0;}
+	.hundred-days .content a {font-size: 12px;padding:14px 0 13px 0;}
+
+	/* Booking.com styles */
+	.booking .imac {background:#003580;height:auto;}
+	.booking .imac .text-block-dark {text-align:center;position:static;top:0;}
+	.booking .showcase {padding-top: 80px; padding-bottom: 40px;}
+	.booking .showcase h3 {padding-top:50px;}
+
+	/* TyT styles */
+	.tyt .concept .isometric {text-align:center;margin-top:0;}
+	.tyt .concept img {width:200px;display:inline-block;}
+	.tyt .concept .text-block-dark {text-align:center;}
+
+	/* Yanmar styles */
+	.yanmar .concept {padding-top:80px;padding-bottom:100px;}
+	.yanmar .concept .text-block-light {text-align:center;padding-bottom:80px;}
+	.yanmar .concept img {width:100%;}
+}
+
+/* Media query: mobile specific */
+@media only screen and (max-width: 601px) {
+
+	/* Basic styles */
+	h1 {font-size: 50px;padding-bottom:5px;}
+	h2 {font-size:17px;}
+	h3 {font-size:32px;}
+	p {font-size: 14px;}
+	.title .home-title-wrapper h1 {font-size:21vw;}
+	.title .home-title-wrapper h1 span {font-size:26vw;}
+	.mobile-only {display:block;}
+	.desktop-tablet-only {display:none;}
+	.col-centered-mobile {float:none;margin:0 auto;}
+	.title {padding: 20px;}
+
+	/* Home styles */
+	.title .title-wrapper h1 {font-size: 21vw;}
+    .title .title-wrapper h1 span {font-size:21vw;padding-top:7%;}
+	.home-project h1 {font-size: 11vw;}
+    .home-project h3, .home-project.home-right h3, .home-project.home-left h3 {font-size:4vw;width:90%;}
+    .home-project .mobile-button {padding: 11px 17px 9px 17px;font-size: 12px;margin-top: 25px;}
+    .home-about-content {width:85%;}
+    .home .home-about p, .home .home-about a {font-size:14.5px;}
+
+	/* 100Days styles */
+	.hundred-days .content {padding:100px 0 80px 0;}
+	.hundred-days .content p {font-size: 16px; padding-left:15px; padding-right:15px;}
+	.hundred-days .best-work {padding-top:40px;}
+	.hundred-days .best-work .title {padding-bottom:45px;}
+	.hundred-days .best-work .title h3 {font-size: 40px;}
+	.hundred-days .content a {font-size: 11px;padding: 11px 0 9px 0;width: 140px;}
+
+
+	/* Booking.com styles */
+	.booking .usp {padding: 25px 0;}
+	.booking .concept .text-block-light {padding-bottom: 60px;}
+	.booking .concept {padding-top:60px;padding-bottom:80px;}
+	.booking .imac {padding:55px 0 0;}
+	.booking .imac .text-block-dark p {padding-bottom:60px;}
+	.booking .compare {padding-top:50px;padding-bottom:60px;}
+	.booking .showcase p {padding:0 10px;font-size:14px;}
+
+	/* Doelbeleggen styles */
+	.doelbeleggen .icons {padding:35px 0;}
+	.doelbeleggen .concept-intro {padding:70px 0 60px 0;background: none;}
+	.doelbeleggen .concept-intro .container {align-self:flex-end;}
+	.doelbeleggen .concept-screen {background:url('../images/doelbeleggen-bg-screen-mobile.svg') no-repeat top right;height:auto;}
+	.doelbeleggen .concept-screen img {margin-top:20px;margin-bottom:30px;}
+	.doelbeleggen .responsive {background:url('../images/doelbeleggen-bg-responsive-mobile.svg') no-repeat top center;height:715px;}
+	.doelbeleggen .responsive .responsive-placement {top:0;align-self:flex-end;}
+	.doelbeleggen .responsive .text-block-dark {padding-left:15px;padding-top:0;padding-bottom:55px;}
+	.doelbeleggen .massive-screen {background: #F5F5F5;padding:50px 0;}
+	.doelbeleggen .massive-intro {background:url('../images/doelbeleggen-square_top.svg') no-repeat top center;padding:100px 0 70px 0;}
+
+	/* TyT styles */
+	.tyt .concept {padding-top:70px;padding-bottom:80px;height:auto;background:url('../images/tyt-top_bg_mobile.svg') no-repeat top center;}
+	.tyt .concept .text-block-dark {text-align: center;}
+	.tyt .concept .isometric {margin-top:80px;}
+	.tyt .trial-error .text-block-light {padding-bottom:80px;padding-top:0;}
+	.tyt .finals-dark {margin:40px 0 75px 0;height:500px;background:url('../images/tyt-center_bg_mobile.svg') no-repeat top center;}
+	.tyt .finals-dark .text-block-dark {padding-bottom:55px;}
+	.tyt .finals-light {background:url('../images/tyt-bottom_bg_mobile.svg') no-repeat bottom center;}
+	.tyt .finals-light .text-block-light {margin-bottom:80px;}
+	.tyt .footer {padding:45px 0;}
+
+	/* Yanmar styles */
+	.yanmar .engine {height:635px;background-position:center center;}
+	.yanmar .concept {padding-top:65px;}
+	.yanmar .showcase {padding-top:65px;}
+	.yanmar .concept .text-block-light {padding-bottom:70px;}
+	.yanmar .storytelling {padding-bottom:75px;}
+	.yanmar .clients {background:url('../images/yanmar-clients_bg.svg') no-repeat 61% top #1A1A1A;}
+	.yanmar .clients .text-block-dark {padding-top: 60px;padding-bottom: 80px;}
+}
+
+/* Media query: tablet specific */
+@media only screen and (min-width: 601px) and (max-width: 991px) {
+
+	/* Basic styles */
+	h3 {font-size: 40px;}
+	p {font-size: 16px;}
+
+	/* Home styles */
+	.title .home-title-wrapper h1 span {font-size:18vw;padding-top:35px;}
+
+	/* 100Days styles */
+	.hundred-days .content {padding:120px 0 110px 0;}
+	.hundred-days .content p {font-size: 20px; padding-left:50px; padding-right:50px;}
+	.hundred-days .best-work-detail p {padding-left:75px;padding-right:75px;}
+
+	/* Booking.com styles */
+	.booking .concept {padding-top:80px;padding-bottom:100px;}
+	.booking .imac {padding:80px 0 0;}
+	.booking .imac .text-block-dark p {padding-bottom: 80px;}
+
+	/* Doelbeleggen styles */
+	.doelbeleggen .icons {padding:50px 0;}
+	.doelbeleggen .concept-intro {background-size:25%;}
+	.doelbeleggen .responsive {background:url('../images/doelbeleggen-bg-responsive-tablet.svg') no-repeat bottom;height:740px;}
+	.doelbeleggen .concept-screen {background:url('../images/doelbeleggen-bg-screen-tablet.svg') no-repeat top right;}
+	.doelbeleggen .concept-screen img {margin-top:80px;margin-bottom:70px;}
+	.doelbeleggen .responsive .text-block-dark {text-align:left;padding-left:55px;padding-top:0;}
+	.doelbeleggen .massive-intro {padding: 110px 0 100px 0;}
+
+	/* TyT styles */
+	.tyt .finals-dark {height:720px;background:url('../images/tyt-center_bg_tablet.svg') no-repeat top center;}
+	.tyt .concept {height:100%;background:url('../images/tyt-top_bg_tablet.svg') no-repeat top center;padding-top:50px;}
+	.tyt .concept .text-block-dark {padding-bottom: 50px;}
+	.tyt .finals-dark .text-block-dark {padding-bottom:75px;}
+	.tyt .finals-light {background:url('../images/tyt-bottom_bg_tablet.svg') no-repeat bottom center;}
+
+	/* Yanmar styles */
+	.yanmar .clients .text-block-dark {padding-top:80px;padding-bottom:100px;}
+	.yanmar .showcase {padding-top:100px;}
+	.yanmar .storytelling {padding-bottom:100px;}
+
+}
+
+/* Media query: viewport for large desktop screens */
+@media only screen and (min-width: 1599px) {
+
+	/* Basic styles */
+	h1 {font-size: 110px;}
+	h2 {font-size: 28px;}
+	.title {border-width:3px;}
+	.header .menu a {font-size:20px;}
+
+	/* Home styles */
+	.home .contact-content {width:530px;}
+	.contact-content-form textarea {height:170px;}
+	.home-about-content {margin-top:8%;}
+
+	/* Booking.com styles */
+	.booking .imac {height:1509px;}
+	.booking .showcase p {padding:0 75px 15px 75px;}
+
+	/* Doelbeleggen styles */
+	.doelbeleggen .concept-screen {background:url('../images/doelbeleggen-bg-screen-large.svg') no-repeat top right;height:auto;}
+	.doelbeleggen .responsive {background:url('../images/doelbeleggen-bg-responsive-large.svg') no-repeat top center;height:973px;}
+	.doelbeleggen .responsive .text-block-dark {padding:0;}
+	.doelbeleggen .responsive .responsive-placement {top:225px;}
+}
+
+
+/*********************************************************
+CUSTOM MEDIA QUERIES
+*********************************************************/
+
+
+
+/* Media query: viewport for extra large desktop screens */
+@media only screen and (min-width: 1919px) {
+	.title .home-title-wrapper h1 {font-size:200px;}
+	.title .home-title-wrapper h1 span {font-size:200px; padding-top:60px;}
+	.home-project h3, .home-project .line-through-link span {font-size:28px;}
+	.work .day-wrapper {width:400px;height:400px}
+	.home-about p {font-size:20px;}
+	.home-about a {font-size:19px;}
+	.title-content h1 {font-size:175px;}
+	.booking .showcase p {padding: 0 150px 15px 150px;}
+}
+
+@media only screen and (min-width: 2150px) {
+	.booking .imac {height:1800px;}
+	.doelbeleggen .concept-screen {margin-bottom:300px;}
+}
+
+/* Media query: viewport higher than tablets and mobile phones */
+@media only screen and (min-width: 991px) {
+	.mobile-tablet-only {display:none !important;}
+	.desktop-only {display:block;}
+	.hundred-days .best-work-detail {width:420px;margin:0 60px 80px 60px;}
+	.showcase-hotel {float: right;}
+	#lightbox #wrapper {width:800px;}
+}
+
+/* Media query: viewport higher than mobile phones */
+@media only screen and (min-width: 601px) {
+	.desktop-tablet-only {display:block;}
+	.mobile-only {display: none !important;}
+}
+
+/* Media query: small mobile screens */
+@media only screen and (max-width: 440px) {
+	.intro h1 {font-size:60px;}
+	.booking .usp .usp-title {font-size:18px;}
+	.booking .usp .usp-subtitle {font-size:15px;}
+	.home .contact-content {width:100%;}
+}
+
+/* Media query: very small mobile screens */
+@media only screen and (max-width: 350px) {
+	h1 {font-size:44px;}
+	h2 {line-height: 1.2;}
+	h3 {font-size:32px;}
+	h5 {font-size:26px;}
+	p {font-size: 14px;}
+	.home-project .mobile-button {padding: 10px 16px 8px 16px;font-size: 11px;}
+    .home-project h3, .home-project.home-right h3, .home-project.home-left h3, .home .home-about p, .home .home-about a {font-size:4.4vw;}
+	.intro h1 {font-size:40px;}
+	.contact {background-size:100%;}
+	.work .day-wrapper .caption h2 {font-size: 28px;}
+	.hundred-days .content {padding:60px 0 50px 0;}
+	.hundred-days h1 {margin-bottom:20px;}
+	.hundred-days .best-work {padding-top:45px;}
+	.hundred-days .best-work .title {padding-bottom: 40px;}
+	.hundred-days .best-work .title h3 {font-size:38px;}
+	.hundred-days .header .full-project {font-size: 11px;padding-bottom:11px;}
+	.tyt .concept {padding-bottom:70px;}
+	.tyt .finals-dark {height:475px;}
+	.tyt .finals-dark .text-block-dark {padding-bottom: 50px;}
+	.tyt .trial-error .text-block-light {padding-bottom:70px;padding-top:0;}
+
+
+}
